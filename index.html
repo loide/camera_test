@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>lets try</title>
+	</head>
+	<body>
+
+		<script src="./js/headtrackr.js"></script>
+
+                <canvas id="inputCanvas" width="320" height="240" style="display:none"></canvas>
+                <video id="inputVideo" autoplay loop></video>
+                <script type="text/javascript">
+                    var videoInput = document.getElementById('inputVideo');
+                    var canvasInput = document.getElementById('inputCanvas');
+                    var positionX, positionY, positionZ, radius;
+
+                    var htracker = new headtrackr.Tracker({ui: true, headPosition: true});
+                    htracker.init(videoInput, canvasInput);
+                    htracker.start();
+
+
+/*                    document.addEventListener("facetrackingEvent", function(event) {
+                                                         positionX = event.x;
+                                                         positionY = event.y;
+                                                         radius = event.height;
+                                                         //console.log("angle " + event.angle + " x " + event.x + " y " + event.y);
+                                                       });*/
+
+/*                    document.addEventListener('headtrackingEvent', 
+				function (event) {
+                                  positionX += event.x;
+                                  positionY += event.y;
+                                  positionZ += event.z;
+                                });*/
+                 </script>
+
+	</body>
+</html>
